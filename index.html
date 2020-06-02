@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar's Reusme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.8rem;
+            background-color: #333;
+            color: wheat;
+        }
+
+        a {
+            text-decoration: none;
+            color: wheat;
+            cursor: pointer;
+        }
+
+        a:hover {
+            background-color: wheat;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bolder;
+            padding: 20px 0;
+
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .intro {
+            /*color: wheat;*/
+            padding: 10px 0;
+            /* top-bottom right-left
+            background-color: #333;*/
+
+        }
+
+        .intro .name {
+            margin: 10px 0;
+        }
+
+        /*  .contact-grid {
+            background-color: #333;
+
+        }  */
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /*color: wheat;*/
+            row-gap: .05rem;
+            column-gap: 100px;
+            margin-bottom: 1.5rem;
+
+
+        }
+
+        .line {
+            width: 70%;
+            border-bottom: 5px solid wheat;
+            margin-bottom: 20px;
+
+        }
+
+        .details-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 0.5rem;
+            column-gap: 100px;
+            /*background-color: #333;
+            color: wheat;*/
+        }
+
+        .university {
+            padding: 20px 0;
+        }
+
+        .college {
+            padding: 20px 0;
+        }
+
+        .skill-bar {
+            width: 100%;
+            background-color: wheat;
+            margin: 20px 0;
+
+        }
+
+        .skills {
+            text-align: right;
+            /* Right-align text */
+            padding-top: 10px;
+            /* Add top padding */
+            padding-bottom: 10px;
+            /* Add bottom padding */
+            color: #333333;
+            /* White text color */
+            font-weight: bolder;
+            background-color: #b3caf5;
+
+        }
+
+        .css {
+            width: 35%;
+        }
+
+        .java {
+            width: 40%;
+        }
+
+        .javascript {
+            width: 50%;
+        }
+
+        .python {
+            width: 70%;
+        }
+
+        .skill-bar h4 {
+            float: left;
+            padding: 10px 0;
+            background-color: #b3caf5;
+            color: #333;
+
+        }
+
+        .experience {
+            margin: 10px 0;
+        }
+
+        .project {
+            margin: 10px 0;
+        }
+
+        .project-name {
+            margin: 20px 0;
+        }
+
+        .project .referee {
+            margin: 10px 0;
+        }
+
+        .list {
+            margin-left: 20px;
+        }
+
+        .border {
+            border: 1px solid wheat;
+            border-radius: 5px;
+            padding: 0 10px;
+            float: left;
+            margin: 0 0 10px 10px;
+        }
+
+
+        footer p {
+            text-align: center;
+            background-color: wheat;
+            color: #333;
+        }
+
+        /*.details-wrapper h1 {
+            background-color: wheat;
+            color: #333;
+        } */
+
+        @media screen and (max-width:1120px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+                row-gap: 0.6rem;
+
+            }
+
+            .details-wrapper {
+                grid-template-columns: 1fr;
+                row-gap: 0.6rem;
+
+            }
+
+            .details-reference {
+                order: 6;
+            }
+
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/1fc9836c51.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <section class="intro">
+            <div class="container">
+                <h1 class="name">Umar Faruk</h1>
+                <h4 class="bio">Knows a little bit about Python,Java and Javascript.Played a little bit with
+                    Node,Express,React,Flask,MySql,MongoDB</h4>
+            </div>
+        </section>
+        <section class="contact-grid">
+            <div class="container">
+                <section class="contact-info">
+                    <p><a rel="noopener noreferrer" href="mailt0:umarfaruk.chowdhury@gmail.com"><i
+                                class="fas fa-envelope"></i> umarfaruk.chowdhury@gmail.com</a></p>
+                    <p><a rel="noopener noreferrer" href="tel:+8801796586623"><i class="fas fa-mobile-alt"></i>
+                            +8801796586623</a></p>
+                    <p><a rel="noopener noreferrer" href="https://www.linkedin.com/in/umar-faruk-chowdhury/"
+                            target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/umar-faruk-chowdhury</a></p>
+                    <p><a rel="noopener noreferrer" href="https://github.com/anotherChowdhury" target="_blank"><i
+                                class="fab fa-github"></i> github.com/anotherChowdhury</a></p>
+                    <p><a rel="noopener noreferrer" href="https://stackoverflow.com/users/10866130/anotherchowdhury"
+                            target="_blank"><i class="fab fa-stack-overflow"></i>
+                            stackoverflow.com/users/10866130/anotherchowdhury</a>
+                    </p>
+                    <p><a rel="noopener noreferrer" href="https://medium.com/@umarfaruk"><i class="fab fa-medium"></i>
+                            medium.com/@umarfaruk</a></p>
+                </section>
+            </div>
+        </section>
+    </header>
+
+    <section class="details-wrapper container">
+        <div class="details-education">
+            <h1>Education</h1>
+            <div class="line"></div>
+            <div class="university">
+                <h3>B.Sc. in Computer Science</h3>
+                <p>Brac University</p>
+                <p>2015-2019</p>
+            </div>
+            <div class="college">
+                <h3>Higher Secondary Certificate</h3>
+                <p>BIAM Model Coleege</p>
+                <p>2012-2014</p>
+            </div>
+        </div>
+        <div class="details-skills">
+            <h1>Skills</h1>
+            <div class="line"></div>
+            <div class="skill-bar">
+                <h4>CSS</h4>
+                <div class="skills css">35%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Java</h4>
+                <div class="skills java">40%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Javascript</h4>
+                <div class="skills javascript">55%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Python</h4>
+                <div class="skills python">70%</div>
+            </div>
+        </div>
+        <div class="details-work-experience">
+            <h1>Experience</h1>
+            <div class="line"></div>
+            <div class="experience">
+                <h2 class="position">Junior Python Developer</h2>
+                <h3 class="company"><a rel="noopener noreferrer" href="https://dgmarketbd.com/" target="_blank">dgMarket
+                        Bangladesh Limited <i class="fas fa-link"></i></a>
+                </h3>
+                <p class="duration">12/2019 – 4/2020</p>
+                <p class="company-overview">dgMarket is a procurement portal. dgMarket's platform provides access to
+                    government procurement information from many countries, as well as to
+                    tenders and contract awards of development agencies.</p>
+                <p class="tasks">Tasks</p>
+                <ul class="list">
+                    <li>Writing python scripts using selenium to collect data</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2 class="position">Brand Executive(Part Time)</h2>
+                <h3 class="company"><a rel="noopener noreferrer" href="http://www.shoptobd.com/"
+                        target="_blank">ShoptoBD <i class="fas fa-link"></i></a></h3>
+                <p class="duration">07/2016 – 01/2020</p>
+                <p class="company-overview">A small company, brings product from Canada using Digital Marketing in
+                    Facebook</p>
+                <p class="tasks">Tasks</p>
+                <ul class="list">
+                    <li>Posting deals and handling customer inquiries</li>
+                </ul>
+            </div>
+        </div>
+        <div class="details-personal-projects">
+            <h1>Personal Projects</h1>
+            <div class="line"></div>
+            <div class="project">
+                <h2 class="project-name"><a rel="noopener noreferrer"
+                        href="https://github.com/anotherChowdhury/ShopToBDScraper_Updated/" target="_blank">ShopToBD
+                        Scraper <i class="fas fa-link"></i></a></h2>
+                <p class="description">I made this to scrap data from different sites which automated some
+                    part of my part time job as a facebook page manager. Used Python,
+                    Selenium, BeautifulSoup. Future Plan is to integrate it using
+                    Facebook's page API to post automatically</p>
+            </div>
+
+            <div class="project">
+                <h2 class="project-name"><a rel="noopener noreferrer" href="https://github.com/anotherChowdhury/Chobi/"
+                        target="_blank" rel="noopener noreferrer">Chobi <i class="fas fa-link"></i></a></h2>
+                <p class="description">It's an image Gallery. Developing for self-learning purpose. Used
+                    Flask, Ajax, Vanilla Javascript, Token based authentication.
+                    Dashboard is a single page which adds or removes element without
+                    reloading the page when image is uploaded or deleted.</p>
+            </div>
+
+            <div class="project">
+                <h2 class="project-name"><a href="https://github.com/anotherChowdhury/boi-android" target="_blank"
+                        rel="noopener noreferrer">Boi (Android) <i class="fas fa-link"></i></a></h2>
+                <p class="description">Used Java and Python. The plan was to make an application where
+                    people will sell their books and it'll collect the information, rating ,
+                    writer of the book automatically from Goodreads and it'll also notify
+                    buyers when any book which is in their goodreads "Want to read" list
+                    gets posted for sale. Notification part has not been done</p>
+            </div>
+
+        </div>
+        <div class="details-reference">
+            <h1>Reference</h1>
+            <div class="line"></div>
+            <div class="referee">
+                <h4 class="referee-name"><a href="https://tahmid-choyon.github.io/" target="_blank"
+                        rel="noopener noreferrer"> Md.Tahmid Choyon <i class="fas fa-link"></i></a></h4>
+                <h3 class="designation">Software Engineer</h4>
+                    <h3 class="company">NewsCred</h3>
+                    <p>Contact</p>
+                    <ul class="list">
+                        <li>tahmid.choyon@gmail.com</li>
+                        <li>+880 1741778025</li>
+                    </ul>
+            </div>
+        </div>
+
+        <div class="details-interests">
+            <h1>Interests</h1>
+            <div class="line"></div>
+            <p class="border">Linux</p>
+            <p class="border">DevOps</p>
+            <p class="border">Philosophy</p>
+            <p class="border">Ghraphic Novels</p>
+            <p class="border">Chess</p>
+            <p class="border">Behavioral Design</p>
+            <p class="border">Behavioral Economics</p>
+        </div>
+    </section>
+    <footer>
+        <p>Made With Hardship By Umar</p>
+    </footer>
+
+
+</body>
+
+</html>
