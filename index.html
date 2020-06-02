@@ -38,8 +38,57 @@
             margin: auto;
         }
 
+        .progress-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10px;
+            background: #333;
+
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: wheat;
+            width: 0%;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 10px;
+            left: 5%;
+            display: none;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .nav-bar ul li a {
+            float: left;
+            padding: 20px;
+            border: 1px solid wheat;
+            width: 20%;
+            overflow: hidden;
+
+        }
+
+        .nav-bar::after {
+            content: "";
+            clear: both;
+            display: block;
+
+        }
+
         .intro {
+            /* clear: both; */
+
             /*color: wheat;*/
+
             padding: 10px 0;
             /* top-bottom right-left
             background-color: #333;*/
@@ -176,6 +225,16 @@
         } */
 
         @media screen and (max-width:1120px) {
+
+            /* Tablet Maybe? */
+            .nav-bar {
+                display: block;
+            }
+
+            .header-wrapper {
+                margin-top: 80px;
+            }
+
             .contact-info {
                 grid-template-columns: 1fr;
                 row-gap: 0.6rem;
@@ -193,16 +252,58 @@
             }
 
         }
+
+        @media screen and (max-width:620px) {
+
+            /*mobile */
+            .nav-bar ul li a {
+                padding: 10px 5px;
+                width: auto;
+
+            }
+        }
     </style>
     <script src="https://kit.fontawesome.com/1fc9836c51.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <nav class="nav-bar container">
+        <ul class="list">
+            <li>
+                <a href="#work-experience">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#education">
+                    Education
+                </a>
+            </li>
+            <li>
+                <a href="#interest">
+                    Interest
+                </a>
+            </li>
+        </ul>
+    </nav>
     <header class="header-wrapper">
         <section class="intro">
             <div class="container">
                 <h1 class="name">Umar Faruk</h1>
-                <h4 class="bio">Knows a little bit about Python,Java and Javascript.Played a little bit with
+                <h4 class="bio">Knows a little bit about Python,Java and Javascript.Played with
                     Node,Express,React,Flask,MySql,MongoDB</h4>
             </div>
         </section>
@@ -229,44 +330,7 @@
     </header>
 
     <section class="details-wrapper container">
-        <div class="details-education">
-            <h1>Education</h1>
-            <div class="line"></div>
-            <div class="university">
-                <h3>B.Sc. in Computer Science</h3>
-                <p>Brac University</p>
-                <p>2015-2019</p>
-            </div>
-            <div class="college">
-                <h3>Higher Secondary Certificate</h3>
-                <p>BIAM Model Coleege</p>
-                <p>2012-2014</p>
-            </div>
-        </div>
-        <div class="details-skills">
-            <h1>Skills</h1>
-            <div class="line"></div>
-            <div class="skill-bar">
-                <h4>CSS</h4>
-                <div class="skills css">35%</div>
-            </div>
-
-            <div class="skill-bar">
-                <h4>Java</h4>
-                <div class="skills java">40%</div>
-            </div>
-
-            <div class="skill-bar">
-                <h4>Javascript</h4>
-                <div class="skills javascript">55%</div>
-            </div>
-
-            <div class="skill-bar">
-                <h4>Python</h4>
-                <div class="skills python">70%</div>
-            </div>
-        </div>
-        <div class="details-work-experience">
+        <div class="details-work-experience" id="work-experience">
             <h1>Experience</h1>
             <div class="line"></div>
             <div class="experience">
@@ -296,7 +360,7 @@
                 </ul>
             </div>
         </div>
-        <div class="details-personal-projects">
+        <div class="details-personal-projects" id="projects">
             <h1>Personal Projects</h1>
             <div class="line"></div>
             <div class="project">
@@ -329,6 +393,45 @@
             </div>
 
         </div>
+
+        <div class="details-skills" id="skills">
+            <h1>Skills</h1>
+            <div class="line"></div>
+            <div class="skill-bar">
+                <h4>CSS</h4>
+                <div class="skills css">35%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Java</h4>
+                <div class="skills java">40%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Javascript</h4>
+                <div class="skills javascript">55%</div>
+            </div>
+
+            <div class="skill-bar">
+                <h4>Python</h4>
+                <div class="skills python">70%</div>
+            </div>
+        </div>
+
+        <div class="details-education" id="education">
+            <h1>Education</h1>
+            <div class="line"></div>
+            <div class="university">
+                <h3>B.Sc. in Computer Science</h3>
+                <p>Brac University</p>
+                <p>2015-2019</p>
+            </div>
+            <div class="college">
+                <h3>Higher Secondary Certificate</h3>
+                <p>BIAM Model Coleege</p>
+                <p>2012-2014</p>
+            </div>
+        </div>
         <div class="details-reference">
             <h1>Reference</h1>
             <div class="line"></div>
@@ -345,7 +448,7 @@
             </div>
         </div>
 
-        <div class="details-interests">
+        <div class="details-interests" id="interest">
             <h1>Interests</h1>
             <div class="line"></div>
             <p class="border">Linux</p>
@@ -361,6 +464,17 @@
         <p>Made With Hardship By Umar</p>
     </footer>
 
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
 
 </body>
 
